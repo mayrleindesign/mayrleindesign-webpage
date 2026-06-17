@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lisa Mayrhofer ist Digital Marketing Managerin und Geschäftsführerin aus Salzburg. Social Media, Performance Marketing, Content und Webdesign für KMU, Superior-Hotels und wachstumsorientierte Marken." />
+  <title>Lisa Mayrhofer | Digital Marketing, Social Media, Performance &amp; Web Design</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif']
+          },
+          colors: {
+            ink: '#12151f',
+            night: '#1c2030',
+            pearl: '#f7f3ec',
+            mist: '#ebe5dc',
+            copper: '#c87947',
+            coral: '#ff6f61',
+            teal: '#1d8a8a'
+          },
+          boxShadow: {
+            glow: '0 24px 70px rgba(200, 121, 71, 0.28)',
+            glass: '0 26px 80px rgba(28, 32, 48, 0.13)'
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    :root {
+      --ink: #12151f;
+      --night: #1c2030;
+      --pearl: #f7f3ec;
+      --mist: #ebe5dc;
+      --copper: #c87947;
+      --coral: #ff6f61;
+      --teal: #1d8a8a;
+      --glass: rgba(255, 255, 255, 0.54);
+      --glass-dark: rgba(18, 21, 31, 0.78);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      overflow-x: hidden;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 18%, rgba(255, 111, 97, 0.24), transparent 32rem),
+        radial-gradient(circle at 82% 8%, rgba(29, 138, 138, 0.2), transparent 34rem),
+        radial-gradient(circle at 58% 74%, rgba(200, 121, 71, 0.2), transparent 42rem),
+        linear-gradient(135deg, #fbf8f2 0%, #f2ece2 44%, #e8e0d4 100%);
+      font-family: Inter, sans-serif;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: -28%;
+      z-index: -3;
+      background:
+        conic-gradient(from 120deg at 50% 50%, rgba(200, 121, 71, 0.34), rgba(29, 138, 138, 0.2), rgba(255, 111, 97, 0.2), rgba(28, 32, 48, 0.16), rgba(200, 121, 71, 0.34));
+      filter: blur(64px);
+      opacity: 0.7;
+      animation: cinematicDrift 28s ease-in-out infinite alternate;
+      transform-origin: center;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(18, 21, 31, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(18, 21, 31, 0.035) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent 80%);
+    }
+
+    @keyframes cinematicDrift {
+      0% { transform: translate3d(-2%, -1%, 0) rotate(0deg) scale(1); }
+      50% { transform: translate3d(2%, 3%, 0) rotate(14deg) scale(1.08); }
+      100% { transform: translate3d(-1%, 4%, 0) rotate(-10deg) scale(1.04); }
+    }
+
+    .noise {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0.13;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 280 280' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
+    }
+
+    .glass {
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.38));
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      box-shadow: 0 24px 80px rgba(28, 32, 48, 0.12);
+      backdrop-filter: blur(26px);
+    }
+
+    .glass-dark {
+      color: #fffaf2;
+      background:
+        radial-gradient(circle at top left, rgba(255, 111, 97, 0.28), transparent 18rem),
+        linear-gradient(145deg, rgba(18, 21, 31, 0.9), rgba(28, 32, 48, 0.78));
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: 0 30px 90px rgba(18, 21, 31, 0.28);
+      backdrop-filter: blur(24px);
+    }
+
+    .accent-gradient {
+      background: linear-gradient(120deg, var(--copper), var(--coral) 48%, var(--teal));
+    }
+
+    .text-gradient {
+      background: linear-gradient(120deg, #11141e, #af6339 38%, #147d82 82%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .btn-glow {
+      position: relative;
+      overflow: hidden;
+      transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
+    }
+
+    .btn-glow::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.32), transparent);
+      transform: translateX(-110%);
+      transition: transform 700ms ease;
+    }
+
+    .btn-glow:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 18px 46px rgba(200, 121, 71, 0.34);
+    }
+
+    .btn-glow:hover::before {
+      transform: translateX(110%);
+    }
+
+    .premium-card {
+      transition: transform 320ms ease, box-shadow 320ms ease, border-color 320ms ease, background 320ms ease;
+    }
+
+    .premium-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      border-color: rgba(200, 121, 71, 0.52);
+      box-shadow: 0 28px 80px rgba(200, 121, 71, 0.22);
+    }
+
+    .showcase-screen {
+      position: relative;
+      overflow: hidden;
+      min-height: 440px;
+      background:
+        radial-gradient(circle at 25% 16%, rgba(255, 111, 97, 0.28), transparent 16rem),
+        radial-gradient(circle at 82% 76%, rgba(29, 138, 138, 0.26), transparent 18rem),
+        linear-gradient(145deg, rgba(18, 21, 31, 0.96), rgba(36, 41, 58, 0.92));
+    }
+
+    .device-frame {
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.05));
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16), 0 24px 60px rgba(0, 0, 0, 0.24);
+    }
+
+    .timeline-line {
+      background: linear-gradient(to bottom, rgba(200, 121, 71, 0.15), rgba(29, 138, 138, 0.62), rgba(255, 111, 97, 0.12));
+    }
+
+    .tab-button.active {
+      color: #fffaf2;
+      background: linear-gradient(120deg, rgba(200, 121, 71, 0.96), rgba(29, 138, 138, 0.92));
+      box-shadow: 0 16px 34px rgba(29, 138, 138, 0.2);
+    }
+
+    .lang-button {
+      color: rgba(18, 21, 31, 0.52);
+      transition: color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+    }
+
+    .lang-button.active {
+      color: #fffaf2;
+      background: var(--ink);
+      box-shadow: 0 10px 24px rgba(18, 21, 31, 0.16);
+    }
+
+    .magnetic-light {
+      position: absolute;
+      width: 19rem;
+      height: 19rem;
+      border-radius: 999px;
+      pointer-events: none;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.24), transparent 65%);
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 250ms ease;
+      mix-blend-mode: screen;
+    }
+
+    .premium-card:hover .magnetic-light,
+    .showcase-screen:hover .magnetic-light {
+      opacity: 1;
+    }
+
+    .field {
+      width: 100%;
+      border: 1px solid rgba(18, 21, 31, 0.12);
+      background: rgba(255, 255, 255, 0.64);
+      border-radius: 1rem;
+      padding: 1rem 1.1rem;
+      outline: none;
+      transition: border-color 220ms ease, box-shadow 220ms ease, background 220ms ease;
+    }
+
+    .field:focus {
+      border-color: rgba(29, 138, 138, 0.58);
+      box-shadow: 0 0 0 4px rgba(29, 138, 138, 0.12);
+      background: rgba(255, 255, 255, 0.86);
+    }
+
+    @media (max-width: 640px) {
+      .showcase-screen {
+        min-height: 560px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.001ms !important;
+      }
+    }
+  </style>
+</head>
+<body class="antialiased">
+  <div class="noise"></div>
+
+  <header class="fixed inset-x-0 top-0 z-50 px-4 pt-4">
+    <nav class="glass mx-auto flex max-w-7xl items-center justify-between rounded-full px-4 py-3 md:px-6" aria-label="Hauptnavigation">
+      <a href="#top" class="font-display text-sm font-bold tracking-wide text-ink md:text-base">Lisa Mayrhofer</a>
+      <div class="hidden items-center gap-6 text-sm font-semibold text-ink/70 md:flex">
+        <a class="transition hover:text-copper" href="#services" data-i18n="nav.services">Services</a>
+        <a class="transition hover:text-copper" href="#showcase" data-i18n="nav.portfolio">Portfolio</a>
+        <a class="transition hover:text-copper" href="#experience" data-i18n="nav.experience">Erfahrung</a>
+        <a class="transition hover:text-copper" href="#support">App Support</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <div class="flex rounded-full border border-ink/10 bg-white/48 p-1" aria-label="Language selection">
+          <button class="lang-button active rounded-full px-3 py-1.5 text-xs font-extrabold" type="button" data-lang="de" aria-pressed="true">DE</button>
+          <button class="lang-button rounded-full px-3 py-1.5 text-xs font-extrabold" type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a href="mailto:mayrleindesign@gmail.com?subject=Kontaktanfrage%20%C3%BCber%20Website" class="btn-glow accent-gradient rounded-full px-4 py-2 text-sm font-bold text-white md:px-5" data-i18n="nav.cta" data-mail-subject="nav.ctaSubject">Kontakt</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="relative min-h-screen px-4 pb-20 pt-32 sm:pt-40 md:px-6 lg:px-8">
+      <div class="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.08fr_0.92fr]">
+        <div>
+          <p class="hero-kicker mb-5 inline-flex rounded-full border border-white/70 bg-white/50 px-4 py-2 text-sm font-bold uppercase tracking-[0.22em] text-copper backdrop-blur-xl" data-i18n="hero.kicker">Digital Marketing • Social Media • Performance • Web Design</p>
+          <h1 class="hero-title max-w-5xl font-display text-[clamp(2.65rem,6.4vw,5.7rem)] font-bold leading-[0.96] text-ink md:leading-[0.94]">
+            <span data-i18n="hero.title">Sichtbarkeit, die nach Marke aussieht und nach Daten arbeitet.</span>
+          </h1>
+          <p class="hero-copy mt-7 max-w-2xl text-lg leading-8 text-ink/72 md:text-xl" data-i18n="hero.copy">
+            Ich verbinde strategische Markenentwicklung, Content Creation und Performance Marketing mit digitalen Oberflächen, die Vertrauen schaffen. Für KMU, Superior-Hotels in Österreich, Vereine mit aktiver Community und Marken, die ihre digitale Kommunikation bewusst weiterentwickeln wollen.
+          </p>
+          <div class="hero-actions mt-9 flex flex-col gap-3 sm:flex-row">
+            <a href="mailto:mayrleindesign@gmail.com?subject=Kontaktanfrage%20%C3%BCber%20Website" class="btn-glow accent-gradient inline-flex items-center justify-center rounded-full px-7 py-4 text-base font-bold text-white" data-i18n="hero.primaryCta" data-mail-subject="hero.primarySubject">Kontakt aufnehmen</a>
+            <a href="#showcase" class="btn-glow inline-flex items-center justify-center rounded-full border border-ink/10 bg-white/60 px-7 py-4 text-base font-bold text-ink backdrop-blur-xl" data-i18n="hero.secondaryCta">Portfolio ansehen</a>
+          </div>
+          <div class="hero-stats mt-10 grid max-w-2xl grid-cols-3 gap-3">
+            <div class="glass rounded-2xl p-4">
+              <strong class="font-display text-2xl text-ink md:text-3xl">9+</strong>
+              <span class="mt-1 block text-xs font-semibold uppercase tracking-wide text-ink/55" data-i18n="hero.statYears">Jahre digital</span>
+            </div>
+            <div class="glass rounded-2xl p-4">
+              <strong class="font-display text-2xl text-ink md:text-3xl">4</strong>
+              <span class="mt-1 block text-xs font-semibold uppercase tracking-wide text-ink/55" data-i18n="hero.statCerts">Zertifizierungen</span>
+            </div>
+            <div class="glass rounded-2xl p-4">
+              <strong class="font-display text-2xl text-ink md:text-3xl">1</strong>
+              <span class="mt-1 block text-xs font-semibold uppercase tracking-wide text-ink/55" data-i18n="hero.statAward">Landespreis</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual relative">
+          <div class="glass-dark overflow-hidden rounded-[2rem] p-5 md:p-7">
+            <div class="mb-6 flex items-center justify-between">
+              <div>
+                <p class="text-sm font-semibold text-white/50" data-i18n="visual.eyebrow">Brand command center</p>
+                <h2 class="font-display text-2xl font-bold">Lisa Mayrhofer</h2>
+              </div>
+              <span class="rounded-full bg-white/10 px-3 py-1 text-xs font-bold text-white/70">Salzburg</span>
+            </div>
+            <div class="grid gap-4">
+              <div class="rounded-3xl border border-white/10 bg-white/8 p-5">
+                <div class="mb-5 flex items-center justify-between">
+                  <span class="text-sm font-semibold text-white/55" data-i18n="visual.mix">Campaign mix</span>
+                  <span class="text-sm font-bold text-coral">Live</span>
+                </div>
+                <div class="space-y-4">
+                  <div>
+                    <div class="mb-2 flex justify-between text-xs font-bold text-white/60"><span>Social Media</span><span>92%</span></div>
+                    <div class="h-2 rounded-full bg-white/10"><div class="h-2 w-[92%] rounded-full accent-gradient"></div></div>
+                  </div>
+                  <div>
+                    <div class="mb-2 flex justify-between text-xs font-bold text-white/60"><span>Meta &amp; Google Ads</span><span>78%</span></div>
+                    <div class="h-2 rounded-full bg-white/10"><div class="h-2 w-[78%] rounded-full bg-teal"></div></div>
+                  </div>
+                  <div>
+                    <div class="mb-2 flex justify-between text-xs font-bold text-white/60"><span>Web &amp; Content UX</span><span>84%</span></div>
+                    <div class="h-2 rounded-full bg-white/10"><div class="h-2 w-[84%] rounded-full bg-copper"></div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="rounded-3xl border border-white/10 bg-white/8 p-5">
+                  <span class="text-xs font-bold uppercase tracking-wider text-white/45" data-i18n="visual.positioning">Positioning</span>
+                  <p class="mt-3 font-display text-xl font-bold leading-tight" data-i18n="visual.positioningCopy">Strategisch denken. Operativ liefern.</p>
+                </div>
+                <div class="rounded-3xl border border-white/10 bg-white/8 p-5">
+                  <span class="text-xs font-bold uppercase tracking-wider text-white/45" data-i18n="visual.mantra">Mantra</span>
+                  <p class="mt-3 font-display text-xl font-bold leading-tight" data-i18n="visual.mantraCopy">#gerneperDu. Daten. Daten. Daten.</p>
+                </div>
+              </div>
+              <div class="rounded-3xl border border-white/10 bg-white/8 p-5">
+                <p class="text-sm leading-6 text-white/68" data-i18n="visual.systemCopy">Für Marken, die Content, Kampagnen, Website, Webshop und Reporting nicht getrennt behandeln wollen, sondern als ein messbares digitales System.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="reveal-section px-4 py-20 md:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="mb-10 max-w-3xl">
+          <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-copper" data-i18n="services.eyebrow">Core Services</p>
+          <h2 class="font-display text-4xl font-bold leading-tight md:text-6xl" data-i18n="services.title">Digitales Wachstum mit Strategie, Stil und sauberem Reporting.</h2>
+        </div>
+        <div class="stagger-grid grid gap-5 md:grid-cols-3">
+          <article class="premium-card glass relative overflow-hidden rounded-[1.5rem] p-7">
+            <div class="magnetic-light"></div>
+            <span class="mb-12 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-ink text-xl text-white">01</span>
+            <h3 class="font-display text-2xl font-bold" data-i18n="services.socialTitle">Social Media Management</h3>
+            <p class="mt-4 leading-7 text-ink/68" data-i18n="services.socialCopy">Content-Planung, Reels, Stories, Feeddesign, Community-Aufbau und Kampagnen für Marken, Hotels und Vereine, die regelmäßig relevant bleiben wollen.</p>
+            <ul class="mt-6 space-y-3 text-sm font-semibold text-ink/62">
+              <li data-i18n="services.socialItem1">Content-Strategie &amp; monatliche Planung</li>
+              <li data-i18n="services.socialItem2">Reels, Stories, Textierung &amp; Grafik</li>
+              <li data-i18n="services.socialItem3">Superior-Hotellerie &amp; Community-Kommunikation</li>
+            </ul>
+          </article>
+          <article class="premium-card glass relative overflow-hidden rounded-[1.5rem] p-7">
+            <div class="magnetic-light"></div>
+            <span class="mb-12 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-copper text-xl text-white">02</span>
+            <h3 class="font-display text-2xl font-bold" data-i18n="services.performanceTitle">Performance Marketing &amp; Reporting</h3>
+            <p class="mt-4 leading-7 text-ink/68" data-i18n="services.performanceCopy">Google Ads, Meta Ads, Monitoring und klare Auswertungen, damit Kampagnen nicht nach Bauchgefühl laufen, sondern messbar optimiert werden.</p>
+            <ul class="mt-6 space-y-3 text-sm font-semibold text-ink/62">
+              <li data-i18n="services.performanceItem1">Google Ads &amp; Meta Ads Setup</li>
+              <li data-i18n="services.performanceItem2">Kampagnenmonitoring &amp; Optimierung</li>
+              <li data-i18n="services.performanceItem3">Reporting mit konkreten To-dos</li>
+            </ul>
+          </article>
+          <article class="premium-card glass relative overflow-hidden rounded-[1.5rem] p-7">
+            <div class="magnetic-light"></div>
+            <span class="mb-12 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-teal text-xl text-white">03</span>
+            <h3 class="font-display text-2xl font-bold" data-i18n="services.webTitle">Web Design &amp; Webshop Content</h3>
+            <p class="mt-4 leading-7 text-ink/68" data-i18n="services.webCopy">Web-Textierung, Keyword-Recherche, Basic SEO, Website- und Webshop-Management für Auftritte, die klar führen und zur Marke passen.</p>
+            <ul class="mt-6 space-y-3 text-sm font-semibold text-ink/62">
+              <li data-i18n="services.webItem1">Webtexte mit klarer Markenstimme</li>
+              <li data-i18n="services.webItem2">SEO Basics &amp; Google Ads Anschluss</li>
+              <li data-i18n="services.webItem3">Produktkommunikation &amp; Launchkampagnen</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="showcase" class="reveal-section px-4 py-20 md:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="mb-8 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div class="max-w-3xl">
+            <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-copper" data-i18n="showcase.eyebrow">Interactive Showcase</p>
+            <h2 class="font-display text-4xl font-bold leading-tight md:text-6xl" data-i18n="showcase.title">Ein Portfolio-System für Social, Ads und Web.</h2>
+          </div>
+          <div class="glass flex rounded-full p-1">
+            <button class="tab-button active rounded-full px-4 py-3 text-sm font-bold transition" data-tab="social" data-i18n="showcase.tabSocial">Social</button>
+            <button class="tab-button rounded-full px-4 py-3 text-sm font-bold transition" data-tab="performance" data-i18n="showcase.tabAds">Ads</button>
+            <button class="tab-button rounded-full px-4 py-3 text-sm font-bold transition" data-tab="web" data-i18n="showcase.tabWeb">Web</button>
+          </div>
+        </div>
+
+        <div class="showcase-screen glass-dark rounded-[2rem] p-5 md:p-8">
+          <div class="magnetic-light"></div>
+          <div class="grid h-full gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+            <div class="relative z-10 flex flex-col justify-between">
+              <div>
+                <p id="showcase-eyebrow" class="text-sm font-bold uppercase tracking-[0.24em] text-coral">Social Media System</p>
+                <h3 id="showcase-title" class="mt-4 font-display text-4xl font-bold leading-tight md:text-5xl">Content, Community und Kampagnen in einem Rhythmus.</h3>
+                <p id="showcase-copy" class="mt-5 max-w-xl text-lg leading-8 text-white/68">Strategie, Monatsplanung, Reels, Stories, Feeddesign und Reporting verbinden sich zu einem Social-Media-System, das Teams entlastet: von gehobener Hotellerie bis zu Vereinen mit aktiver Motorsport-Community.</p>
+              </div>
+              <div class="mt-8 grid grid-cols-3 gap-3">
+                <div class="rounded-2xl border border-white/10 bg-white/8 p-4">
+                  <strong id="showcase-metric-a" class="font-display text-2xl">7+</strong>
+                  <span id="showcase-label-a" class="block text-xs font-bold uppercase tracking-wide text-white/48">Jahre Social</span>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/8 p-4">
+                <strong id="showcase-metric-b" class="font-display text-2xl">2</strong>
+                  <span id="showcase-label-b" class="block text-xs font-bold uppercase tracking-wide text-white/48">Welten</span>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/8 p-4">
+                  <strong id="showcase-metric-c" class="font-display text-2xl">∞</strong>
+                  <span id="showcase-label-c" class="block text-xs font-bold uppercase tracking-wide text-white/48">Optimierung</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative min-h-[360px]">
+              <div class="device-frame absolute left-0 top-8 w-[58%] rounded-[2rem] p-4 sm:left-8">
+                <div class="rounded-[1.5rem] bg-pearl p-4 text-ink">
+                  <div class="mb-4 h-48 rounded-[1.2rem] bg-[linear-gradient(135deg,#12151f,#c87947,#1d8a8a)]"></div>
+                  <div class="h-3 w-3/4 rounded-full bg-ink/18"></div>
+                  <div class="mt-3 h-3 w-1/2 rounded-full bg-copper/40"></div>
+                </div>
+              </div>
+              <div class="device-frame absolute bottom-0 right-0 w-[58%] rounded-[2rem] p-4">
+                <div class="rounded-[1.5rem] bg-white/10 p-4">
+                  <div class="mb-5 flex gap-2">
+                    <span class="h-3 w-3 rounded-full bg-coral"></span>
+                    <span class="h-3 w-3 rounded-full bg-copper"></span>
+                    <span class="h-3 w-3 rounded-full bg-teal"></span>
+                  </div>
+                  <div class="space-y-3">
+                    <div class="h-4 rounded-full bg-white/70"></div>
+                    <div class="h-4 w-4/5 rounded-full bg-white/35"></div>
+                    <div class="h-28 rounded-2xl bg-white/12"></div>
+                    <div class="h-4 w-2/3 rounded-full bg-teal/70"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="results" class="reveal-section px-4 py-20 md:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="glass overflow-hidden rounded-[2rem] p-6 md:p-10">
+          <div class="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
+            <div>
+              <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-copper" data-i18n="results.eyebrow">Results &amp; Proof</p>
+              <h2 class="font-display text-4xl font-bold leading-tight md:text-6xl" data-i18n="results.title">Erfahrung, die in echten Arbeitskontexten gewachsen ist.</h2>
+            </div>
+            <div class="stagger-grid grid gap-4 sm:grid-cols-2">
+              <div class="rounded-3xl bg-ink p-6 text-white">
+                <strong class="font-display text-5xl">2025</strong>
+                <p class="mt-3 text-sm font-semibold leading-6 text-white/64" data-i18n="results.item2025">Digital Marketing Managerin bei Dr. Spiller mit Social Media, Newsletter, Webshop, Google Ads, Meta Ads und Launchkampagnen.</p>
+              </div>
+              <div class="rounded-3xl bg-white/60 p-6">
+                <strong class="font-display text-5xl">2024</strong>
+                <p class="mt-3 text-sm font-semibold leading-6 text-ink/62" data-i18n="results.item2024">Start als Geschäftsführerin einer Werbeagentur für KMU, Superior-Hotels in Österreich und Organisationen mit laufendem Social-Media-Bedarf.</p>
+              </div>
+              <div class="rounded-3xl bg-white/60 p-6">
+                <strong class="font-display text-5xl">3+</strong>
+                <p class="mt-3 text-sm font-semibold leading-6 text-ink/62" data-i18n="results.itemStrategy">Jahre Head of Digital Strategy mit Markenentwicklung, Zielgruppenarbeit, Social Strategie, SEO Basics und Google Ads.</p>
+              </div>
+              <div class="rounded-3xl bg-[linear-gradient(135deg,#c87947,#ff6f61,#1d8a8a)] p-6 text-white">
+                <strong class="font-display text-5xl">5</strong>
+                <p class="mt-3 text-sm font-semibold leading-6 text-white/72" data-i18n="results.itemIndustries">Branchenerfahrung aus Beauty, Superior-Hotellerie, Motorsport, Automotive, Maschinenbau, Gartenbau und KMU-Kommunikation.</p>
+              </div>
+            </div>
+          </div>
+          <div class="stagger-grid mt-8 grid gap-4 md:grid-cols-3">
+            <article class="rounded-3xl border border-ink/10 bg-white/58 p-6">
+              <p class="text-sm font-bold uppercase tracking-[0.18em] text-copper">Hospitality</p>
+              <h3 class="mt-4 font-display text-2xl font-bold" data-i18n="results.hospitalityTitle">Social Media für Superior-Hotels in Österreich</h3>
+              <p class="mt-3 text-sm font-semibold leading-6 text-ink/62" data-i18n="results.hospitalityCopy">Anonymisierte Referenz aus der gehobenen Hotellerie: saisonale Kommunikation, Aufenthaltsgefühl, Angebote und Markenästhetik auf Social Media übersetzen.</p>
+            </article>
+            <article class="rounded-3xl border border-ink/10 bg-white/58 p-6">
+              <p class="text-sm font-bold uppercase tracking-[0.18em] text-teal">Community</p>
+              <h3 class="mt-4 font-display text-2xl font-bold" data-i18n="results.communityTitle">Social Media Management für MSV Schwanenstadt</h3>
+              <p class="mt-3 text-sm font-semibold leading-6 text-ink/62" data-i18n="results.communityCopy">Vereins- und Eventkommunikation für eine Motorsport-Community mit MotoX, Supermoto und Oldtimer-GP Themen.</p>
+              <a class="mt-4 inline-flex text-sm font-bold text-teal" href="https://www.msv-schwanenstadt.at" target="_blank" rel="noreferrer">msv-schwanenstadt.at</a>
+            </article>
+            <article class="rounded-3xl border border-ink/10 bg-ink p-6 text-white">
+              <p class="text-sm font-bold uppercase tracking-[0.18em] text-coral">Range</p>
+              <h3 class="mt-4 font-display text-2xl font-bold" data-i18n="results.rangeTitle">Hochwertiges Gefühl und Community-Nähe</h3>
+              <p class="mt-3 text-sm font-semibold leading-6 text-white/64" data-i18n="results.rangeCopy">Das ist die spannende Kombination: ruhige, hochwertige Markenwelten genauso wie schnelle, emotionale Kommunikation für aktive Communities.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="reveal-section px-4 py-20 md:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="mb-12 max-w-3xl">
+          <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-copper" data-i18n="experience.eyebrow">Experience</p>
+          <h2 class="font-display text-4xl font-bold leading-tight md:text-6xl" data-i18n="experience.title">Von PR über Social Media zur digitalen Markenführung.</h2>
+        </div>
+        <div class="relative">
+          <div class="timeline-line absolute left-4 top-0 hidden h-full w-px md:block"></div>
+          <div class="stagger-grid space-y-5 md:pl-12">
+            <article class="glass rounded-[1.5rem] p-6 md:p-7">
+              <div class="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                <div>
+                  <h3 class="font-display text-2xl font-bold" data-i18n="experience.drTitle">Digital Marketing Managerin · Dr. Spiller GmbH</h3>
+                  <p class="mt-2 text-ink/62" data-i18n="experience.drCopy">Contentplanung, Reels, Stories, Newsletter, Website, Webshop, Google Ads, Meta Ads, Produktkommunikation und Launchkampagnen.</p>
+                </div>
+                <span class="rounded-full bg-ink px-4 py-2 text-sm font-bold text-white" data-i18n="date.present2025">2025 - heute</span>
+              </div>
+            </article>
+            <article class="glass rounded-[1.5rem] p-6 md:p-7">
+              <div class="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                <div>
+                  <h3 class="font-display text-2xl font-bold" data-i18n="experience.selfTitle">Geschäftsführerin · Lisa Mayrhofer</h3>
+                  <p class="mt-2 text-ink/62" data-i18n="experience.selfCopy">Selbstständige Werbeagentur für KMU, Superior-Hotels in Österreich und Community-getriebene Organisationen wie MSV Schwanenstadt.</p>
+                </div>
+                <span class="rounded-full bg-copper px-4 py-2 text-sm font-bold text-white" data-i18n="date.present2024">2024 - heute</span>
+              </div>
+            </article>
+            <article class="glass rounded-[1.5rem] p-6 md:p-7">
+              <div class="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                <div>
+                  <h3 class="font-display text-2xl font-bold" data-i18n="experience.strategyTitle">Head of Digital Strategy · manufaktur²</h3>
+                  <p class="mt-2 text-ink/62" data-i18n="experience.strategyCopy">Markenentwicklung, Textkonzeption, Zielgruppendefinition, Social-Media-Strategie, Kanalaufbau, Reporting, Keyword-Recherche und Google Ads.</p>
+                </div>
+                <span class="rounded-full bg-teal px-4 py-2 text-sm font-bold text-white">2021 - 2024</span>
+              </div>
+            </article>
+            <article class="glass rounded-[1.5rem] p-6 md:p-7">
+              <div class="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                <div>
+                  <h3 class="font-display text-2xl font-bold" data-i18n="experience.wugerTitle">Social Media Managerin · WUGER Brands in Motion</h3>
+                  <p class="mt-2 text-ink/62" data-i18n="experience.wugerCopy">Social Media Konzeption und Management für internationale Kunden aus Automotive, Maschinenbau und Gartenbau inklusive Employer und Product Branding.</p>
+                </div>
+                <span class="rounded-full bg-ink px-4 py-2 text-sm font-bold text-white">2018 - 2021</span>
+              </div>
+            </article>
+            <article class="glass rounded-[1.5rem] p-6 md:p-7">
+              <div class="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                <div>
+                  <h3 class="font-display text-2xl font-bold" data-i18n="experience.prTitle">PR, Online-Marketing &amp; Webdesign · Salzburg und München</h3>
+                  <p class="mt-2 text-ink/62" data-i18n="experience.prCopy">PR-Beratung, Employer Branding, Grafikdesign, Layout, Webdesign, Eventbetreuung und Pressearbeit nach dem BA-Studium Journalismus und PR.</p>
+                </div>
+                <span class="rounded-full bg-coral px-4 py-2 text-sm font-bold text-white">2013 - 2018</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="reveal-section px-4 py-20 md:px-6 lg:px-8">
+      <div class="mx-auto max-w-4xl">
+        <div class="glass-dark rounded-[2rem] p-7 md:p-10">
+          <p class="mb-4 text-sm font-bold uppercase tracking-[0.22em] text-coral">Contact</p>
+          <h2 class="font-display text-4xl font-bold leading-tight md:text-6xl" data-i18n="contact.title">Lass uns über digitale Kommunikation sprechen.</h2>
+          <p class="mt-6 text-lg leading-8 text-white/68" data-i18n="contact.copy">Schick mir kurz, woran du arbeitest. Ich melde mich mit einer strukturierten Einschätzung zu Strategie, Content, Website, App Support oder Kampagnen-Setup.</p>
+          <div class="mt-8 space-y-3 text-white/72">
+            <a class="block font-semibold transition hover:text-white" href="mailto:mayrleindesign@gmail.com">mayrleindesign@gmail.com</a>
+            <p class="font-semibold" data-i18n="contact.location">Salzburg, Österreich</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="support" class="reveal-section px-4 pb-24 pt-10 md:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="glass rounded-[2rem] p-6 md:p-10">
+          <div class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+            <div>
+              <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-copper" data-i18n="support.eyebrow">App Support &amp; Datenschutzkontakt</p>
+              <h2 class="font-display text-4xl font-bold leading-tight md:text-5xl" data-i18n="support.title">Support- und Datenschutzseite für Apps von Mayrlein Design.</h2>
+            </div>
+            <div class="grid gap-4 md:grid-cols-2">
+              <div class="rounded-3xl bg-white/56 p-6">
+                <h3 class="font-display text-2xl font-bold" data-i18n="support.supportTitle">App Support</h3>
+                <p class="mt-4 leading-7 text-ink/66" data-i18n="support.copy">Für Fragen zu Apps, Support-Anliegen, Datenschutzkommunikation oder technischen Rückmeldungen erreichst du mich per E-Mail.</p>
+                <a class="mt-5 inline-flex font-bold text-teal" href="mailto:mayrleindesign@gmail.com?subject=App%20Support%20Anfrage" data-i18n="support.cta" data-mail-subject="support.subject">App Support kontaktieren</a>
+              </div>
+              <div class="rounded-3xl bg-ink p-6 text-white">
+                <h3 class="font-display text-2xl font-bold" data-i18n="support.privacyTitle">Datenschutz</h3>
+                <p class="mt-4 text-sm font-semibold leading-6 text-white/64" data-i18n="support.privacyCopy">Diese Support-Seite verarbeitet keine Eingaben direkt im Browser und setzt kein eigenes Tracking ein. Wenn du per E-Mail Kontakt aufnimmst, werden deine E-Mail-Adresse und Nachricht ausschließlich zur Bearbeitung der Anfrage verwendet. App-spezifische Datenschutzangaben müssen vor Veröffentlichung an die tatsächliche Datenverarbeitung der jeweiligen App angepasst werden.</p>
+                <dl class="mt-4 space-y-3 text-sm text-white/68">
+                  <div><dt class="font-bold text-white" data-i18n="support.operatorLabel">Operator</dt><dd>Mayrlein Design · Lisa Mayrhofer</dd></div>
+                  <div><dt class="font-bold text-white" data-i18n="support.locationLabel">Standort</dt><dd data-i18n="contact.location">Salzburg, Österreich</dd></div>
+                  <div><dt class="font-bold text-white" data-i18n="support.emailLabel">E-Mail</dt><dd><a class="hover:text-white" href="mailto:mayrleindesign@gmail.com">mayrleindesign@gmail.com</a></dd></div>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="px-4 pb-8 md:px-6 lg:px-8">
+    <div class="mx-auto flex max-w-7xl flex-col justify-between gap-3 border-t border-ink/10 pt-6 text-sm font-semibold text-ink/54 md:flex-row">
+      <p data-i18n="footer.copy">© 2026 Lisa Mayrhofer. Digital Marketing, Social Media, Performance &amp; Web Design.</p>
+      <p data-i18n="footer.mantra">#gerneperDu · Daten, Daten, Daten.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script>
+    let currentLanguage = 'de';
+
+    const translations = {
+      de: {
+        meta: {
+          title: 'Lisa Mayrhofer | Digital Marketing, Social Media, Performance & Web Design',
+          description: 'Lisa Mayrhofer ist Digital Marketing Managerin und Geschäftsführerin aus Salzburg. Social Media, Performance Marketing, Content und Webdesign für KMU, Superior-Hotels und wachstumsorientierte Marken.',
+          navLabel: 'Hauptnavigation'
+        },
+        nav: {
+          services: 'Services',
+          portfolio: 'Portfolio',
+          experience: 'Erfahrung',
+          cta: 'Kontakt',
+          ctaSubject: 'Kontaktanfrage über Website'
+        },
+        hero: {
+          kicker: 'Digital Marketing • Social Media • Performance • Web Design',
+          title: 'Digitale Kommunikation mit Markengefühl und Datenblick.',
+          copy: 'Ich verbinde strategische Markenentwicklung, Content Creation und Performance Marketing mit digitalen Oberflächen, die Vertrauen schaffen. Für KMU, Superior-Hotels in Österreich, Vereine mit aktiver Community und Marken, die ihre digitale Kommunikation bewusst weiterentwickeln wollen.',
+          primaryCta: 'Kontakt aufnehmen',
+          primarySubject: 'Kontaktanfrage über Website',
+          secondaryCta: 'Portfolio ansehen',
+          statYears: 'Jahre digital',
+          statCerts: 'Zertifizierungen',
+          statAward: 'Landespreis'
+        },
+        visual: {
+          eyebrow: 'Brand command center',
+          mix: 'Campaign mix',
+          positioning: 'Positioning',
+          positioningCopy: 'Strategisch denken. Operativ liefern.',
+          mantra: 'Mantra',
+          mantraCopy: '#gerneperDu. Daten. Daten. Daten.',
+          systemCopy: 'Für Marken, die Content, Kampagnen, Website, Webshop und Reporting nicht getrennt behandeln wollen, sondern als ein messbares digitales System.'
+        },
+        services: {
+          eyebrow: 'Core Services',
+          title: 'Digitale Arbeit mit Strategie, Stil und sauberem Reporting.',
+          socialTitle: 'Social Media Management',
+          socialCopy: 'Content-Planung, Reels, Stories, Feeddesign, Community-Aufbau und Kampagnen für Marken, Hotels und Vereine, die regelmäßig relevant bleiben wollen.',
+          socialItem1: 'Content-Strategie & monatliche Planung',
+          socialItem2: 'Reels, Stories, Textierung & Grafik',
+          socialItem3: 'Superior-Hotellerie & Community-Kommunikation',
+          performanceTitle: 'Performance Marketing & Reporting',
+          performanceCopy: 'Google Ads, Meta Ads, Monitoring und klare Auswertungen, damit Kampagnen nicht nach Bauchgefühl laufen, sondern messbar optimiert werden.',
+          performanceItem1: 'Google Ads & Meta Ads Setup',
+          performanceItem2: 'Kampagnenmonitoring & Optimierung',
+          performanceItem3: 'Reporting mit konkreten To-dos',
+          webTitle: 'Web Design & Webshop Content',
+          webCopy: 'Web-Textierung, Keyword-Recherche, Basic SEO, Website- und Webshop-Management für Auftritte, die klar führen und zur Marke passen.',
+          webItem1: 'Webtexte mit klarer Markenstimme',
+          webItem2: 'SEO Basics & Google Ads Anschluss',
+          webItem3: 'Produktkommunikation & Launchkampagnen'
+        },
+        showcase: {
+          eyebrow: 'Interactive Showcase',
+          title: 'Ein Portfolio-System für Social, Ads und Web.',
+          tabSocial: 'Social',
+          tabAds: 'Ads',
+          tabWeb: 'Web'
+        },
+        results: {
+          eyebrow: 'Results & Proof',
+          title: 'Erfahrung, die in echten Arbeitskontexten gewachsen ist.',
+          item2025: 'Digital Marketing Managerin bei Dr. Spiller mit Social Media, Newsletter, Webshop, Google Ads, Meta Ads und Launchkampagnen.',
+          item2024: 'Start als Geschäftsführerin einer Werbeagentur für KMU, Superior-Hotels in Österreich und Organisationen mit laufendem Social-Media-Bedarf.',
+          itemStrategy: 'Jahre Head of Digital Strategy mit Markenentwicklung, Zielgruppenarbeit, Social Strategie, SEO Basics und Google Ads.',
+          itemIndustries: 'Branchenerfahrung aus Beauty, Superior-Hotellerie, Motorsport, Automotive, Maschinenbau, Gartenbau und KMU-Kommunikation.',
+          hospitalityTitle: 'Social Media für Superior-Hotels in Österreich',
+          hospitalityCopy: 'Anonymisierte Referenz aus der gehobenen Hotellerie: saisonale Kommunikation, Aufenthaltsgefühl, Angebote und Markenästhetik auf Social Media übersetzen.',
+          communityTitle: 'Social Media Management für MSV Schwanenstadt',
+          communityCopy: 'Vereins- und Eventkommunikation für eine Motorsport-Community mit MotoX, Supermoto und Oldtimer-GP Themen.',
+          rangeTitle: 'Hochwertiges Gefühl und Community-Nähe',
+          rangeCopy: 'Das ist die spannende Kombination: ruhige, hochwertige Markenwelten genauso wie schnelle, emotionale Kommunikation für aktive Communities.'
+        },
+        experience: {
+          eyebrow: 'Experience',
+          title: 'Von PR über Social Media zur digitalen Markenführung.',
+          drTitle: 'Digital Marketing Managerin · Dr. Spiller GmbH',
+          drCopy: 'Contentplanung, Reels, Stories, Newsletter, Website, Webshop, Google Ads, Meta Ads, Produktkommunikation und Launchkampagnen.',
+          selfTitle: 'Geschäftsführerin · Lisa Mayrhofer',
+          selfCopy: 'Selbstständige Werbeagentur für KMU, Superior-Hotels in Österreich und Community-getriebene Organisationen wie MSV Schwanenstadt.',
+          strategyTitle: 'Head of Digital Strategy · manufaktur²',
+          strategyCopy: 'Markenentwicklung, Textkonzeption, Zielgruppendefinition, Social-Media-Strategie, Kanalaufbau, Reporting, Keyword-Recherche und Google Ads.',
+          wugerTitle: 'Social Media Managerin · WUGER Brands in Motion',
+          wugerCopy: 'Social Media Konzeption und Management für internationale Kunden aus Automotive, Maschinenbau und Gartenbau inklusive Employer und Product Branding.',
+          prTitle: 'PR, Online-Marketing & Webdesign · Salzburg und München',
+          prCopy: 'PR-Beratung, Employer Branding, Grafikdesign, Layout, Webdesign, Eventbetreuung und Pressearbeit nach dem BA-Studium Journalismus und PR.'
+        },
+        date: {
+          present2025: '2025 - heute',
+          present2024: '2024 - heute'
+        },
+        contact: {
+          title: 'Lass uns über digitale Kommunikation sprechen.',
+          copy: 'Schick mir kurz, woran du arbeitest. Ich melde mich mit einer strukturierten Einschätzung zu Strategie, Content, Website, App Support oder Kampagnen-Setup.',
+          location: 'Salzburg, Österreich'
+        },
+        support: {
+          eyebrow: 'App Support & Datenschutzkontakt',
+          title: 'Support- und Datenschutzseite für Apps von Mayrlein Design.',
+          supportTitle: 'App Support',
+          copy: 'Für Fragen zu Apps, Support-Anliegen, Datenschutzkommunikation oder technischen Rückmeldungen erreichst du mich per E-Mail.',
+          cta: 'App Support kontaktieren',
+          subject: 'App Support Anfrage',
+          privacyTitle: 'Datenschutz',
+          privacyCopy: 'Diese Support-Seite verarbeitet keine Eingaben direkt im Browser und setzt kein eigenes Tracking ein. Wenn du per E-Mail Kontakt aufnimmst, werden deine E-Mail-Adresse und Nachricht ausschließlich zur Bearbeitung der Anfrage verwendet. App-spezifische Datenschutzangaben müssen vor Veröffentlichung an die tatsächliche Datenverarbeitung der jeweiligen App angepasst werden.',
+          operatorLabel: 'Operator',
+          locationLabel: 'Standort',
+          emailLabel: 'E-Mail'
+        },
+        footer: {
+          copy: '© 2026 Lisa Mayrhofer. Digital Marketing, Social Media, Performance & Web Design.',
+          mantra: '#gerneperDu · Daten, Daten, Daten.'
+        }
+      },
+      en: {
+        meta: {
+          title: 'Lisa Mayrhofer | Digital Marketing, Social Media, Performance & Web Design',
+          description: 'Lisa Mayrhofer is a Digital Marketing Manager and agency founder from Salzburg. Social media, performance marketing, content and web design for SMEs, superior hotels and growth-minded brands.',
+          navLabel: 'Primary navigation'
+        },
+        nav: {
+          services: 'Services',
+          portfolio: 'Portfolio',
+          experience: 'Experience',
+          cta: 'Contact',
+          ctaSubject: 'Contact request via website'
+        },
+        hero: {
+          kicker: 'Digital Marketing • Social Media • Performance • Web Design',
+          title: 'Digital communication with brand sensitivity and a data mindset.',
+          copy: 'I connect strategic brand development, content creation and performance marketing with digital touchpoints that build trust. For SMEs, superior hotels in Austria, community-driven organizations and brands that want to develop their digital communication with intention.',
+          primaryCta: 'Get in touch',
+          primarySubject: 'Contact request via website',
+          secondaryCta: 'View portfolio',
+          statYears: 'Years digital',
+          statCerts: 'Certifications',
+          statAward: 'Regional award'
+        },
+        visual: {
+          eyebrow: 'Brand command center',
+          mix: 'Campaign mix',
+          positioning: 'Positioning',
+          positioningCopy: 'Think strategically. Execute hands-on.',
+          mantra: 'Mantra',
+          mantraCopy: '#gerneperDu. Data. Data. Data.',
+          systemCopy: 'For brands that do not want to treat content, campaigns, website, webshop and reporting as separate tasks, but as one measurable digital system.'
+        },
+        services: {
+          eyebrow: 'Core Services',
+          title: 'Digital work with strategy, style and clean reporting.',
+          socialTitle: 'Social Media Management',
+          socialCopy: 'Content planning, reels, stories, feed design, community building and campaigns for brands, hotels and organizations that need to stay consistently relevant.',
+          socialItem1: 'Content strategy & monthly planning',
+          socialItem2: 'Reels, stories, copywriting & graphics',
+          socialItem3: 'Superior hospitality & community communication',
+          performanceTitle: 'Performance Marketing & Reporting',
+          performanceCopy: 'Google Ads, Meta Ads, monitoring and clear analysis, so campaigns are not driven by gut feeling but improved through measurable insight.',
+          performanceItem1: 'Google Ads & Meta Ads setup',
+          performanceItem2: 'Campaign monitoring & optimization',
+          performanceItem3: 'Reporting with concrete to-dos',
+          webTitle: 'Web Design & Webshop Content',
+          webCopy: 'Website copy, keyword research, basic SEO, website and webshop management for digital presences that guide clearly and feel aligned with the brand.',
+          webItem1: 'Website copy with a clear brand voice',
+          webItem2: 'SEO basics & Google Ads alignment',
+          webItem3: 'Product communication & launch campaigns'
+        },
+        showcase: {
+          eyebrow: 'Interactive Showcase',
+          title: 'A portfolio system for social, ads and web.',
+          tabSocial: 'Social',
+          tabAds: 'Ads',
+          tabWeb: 'Web'
+        },
+        results: {
+          eyebrow: 'Results & Proof',
+          title: 'Experience built in real operating environments.',
+          item2025: 'Digital Marketing Manager at Dr. Spiller, covering social media, newsletters, webshop, Google Ads, Meta Ads and launch campaigns.',
+          item2024: 'Founded an agency supporting SMEs, superior hotels in Austria and organizations with ongoing social media needs.',
+          itemStrategy: 'Years as Head of Digital Strategy covering brand development, target audience work, social strategy, basic SEO and Google Ads.',
+          itemIndustries: 'Industry experience across beauty, superior hospitality, motorsport, automotive, mechanical engineering, gardening and SME communication.',
+          hospitalityTitle: 'Social media for superior hotels in Austria',
+          hospitalityCopy: 'Anonymized reference from premium hospitality: translating seasonal communication, guest experience, offers and brand aesthetics into social media.',
+          communityTitle: 'Social media management for MSV Schwanenstadt',
+          communityCopy: 'Club and event communication for a motorsport community across MotoX, Supermoto and Oldtimer GP topics.',
+          rangeTitle: 'High-quality brand feel and community proximity',
+          rangeCopy: 'That is the interesting range: calm, high-end brand worlds on one side and fast, emotional communication for active communities on the other.'
+        },
+        experience: {
+          eyebrow: 'Experience',
+          title: 'From PR and social media to digital brand leadership.',
+          drTitle: 'Digital Marketing Manager · Dr. Spiller GmbH',
+          drCopy: 'Content planning, reels, stories, newsletters, website, webshop, Google Ads, Meta Ads, product communication and launch campaigns.',
+          selfTitle: 'Founder & Managing Director · Lisa Mayrhofer',
+          selfCopy: 'Independent agency for SMEs, superior hotels in Austria and community-driven organizations such as MSV Schwanenstadt.',
+          strategyTitle: 'Head of Digital Strategy · manufaktur²',
+          strategyCopy: 'Brand development, copy concepts, target audience definition, social media strategy, channel building, reporting, keyword research and Google Ads.',
+          wugerTitle: 'Social Media Manager · WUGER Brands in Motion',
+          wugerCopy: 'Social media concepts and management for international clients in automotive, mechanical engineering and gardening, including employer and product branding.',
+          prTitle: 'PR, Online Marketing & Web Design · Salzburg and Munich',
+          prCopy: 'PR consulting, employer branding, graphic design, layout, web design, event support and press work after a BA degree in Journalism and Public Relations.'
+        },
+        date: {
+          present2025: '2025 - present',
+          present2024: '2024 - present'
+        },
+        contact: {
+          title: 'Let’s talk about digital communication.',
+          copy: 'Send a short note about what you are working on. I will reply with a structured perspective on strategy, content, website, app support or campaign setup.',
+          location: 'Salzburg, Austria'
+        },
+        support: {
+          eyebrow: 'App Support & Privacy Contact',
+          title: 'Support and privacy page for apps by Mayrlein Design.',
+          supportTitle: 'App Support',
+          copy: 'For app questions, support requests, privacy communication or technical feedback, you can reach me by email.',
+          cta: 'Contact app support',
+          subject: 'App support request',
+          privacyTitle: 'Privacy Policy',
+          privacyCopy: 'This support page does not process form entries directly in the browser and does not use first-party tracking. If you contact us by email, your email address and message are used only to process your request. App-specific privacy information must be updated before release to reflect the actual data processing of each app.',
+          operatorLabel: 'Operator',
+          locationLabel: 'Location',
+          emailLabel: 'Email'
+        },
+        footer: {
+          copy: '© 2026 Lisa Mayrhofer. Digital Marketing, Social Media, Performance & Web Design.',
+          mantra: '#gerneperDu · Data, data, data.'
+        }
+      }
+    };
+
+    function translate(path) {
+      return path.split('.').reduce((value, key) => value && value[key], translations[currentLanguage]) || '';
+    }
+
+    const showcaseData = {
+      de: {
+        social: {
+          eyebrow: 'Social Media System',
+          title: 'Content, Community und Kampagnen in einem Rhythmus.',
+          copy: 'Strategie, Monatsplanung, Reels, Stories, Feeddesign und Reporting verbinden sich zu einem Social-Media-System, das Teams entlastet: von gehobener Hotellerie bis zu Vereinen mit aktiver Motorsport-Community.',
+          metrics: [['7+', 'Jahre Social'], ['2', 'Welten'], ['∞', 'Optimierung']]
+        },
+        performance: {
+          eyebrow: 'Performance Marketing & Reporting',
+          title: 'Kampagnen, die kreativ starten und datenbasiert besser werden.',
+          copy: 'Google Ads, Meta Ads, laufendes Monitoring und klare Reports machen sichtbar, welche Botschaften, Zielgruppen und Kanäle wirklich für Reichweite und Conversions arbeiten.',
+          metrics: [['Meta', 'Ads'], ['Google', 'Ads'], ['ROI', 'Fokus']]
+        },
+        web: {
+          eyebrow: 'Web Design & Webshop Content',
+          title: 'Websites und Shops, die Marke, Suche und Kaufentscheidung verbinden.',
+          copy: 'Web-Textierung, Keyword-Recherche, Basic SEO, Produktkommunikation und Kampagnenlogik greifen ineinander, damit digitale Touchpoints klar verständlich und markenkonsistent bleiben.',
+          metrics: [['SEO', 'Basics'], ['Ads', 'Anschluss'], ['UX', 'Klarheit']]
+        }
+      },
+      en: {
+        social: {
+          eyebrow: 'Social Media System',
+          title: 'Content, community and campaigns in one rhythm.',
+          copy: 'Strategy, monthly planning, reels, stories, feed design and reporting become one social media system that supports teams, from premium hospitality to clubs with active motorsport communities.',
+          metrics: [['7+', 'Years social'], ['2', 'Worlds'], ['∞', 'Optimization']]
+        },
+        performance: {
+          eyebrow: 'Performance Marketing & Reporting',
+          title: 'Campaigns that start creatively and improve through data.',
+          copy: 'Google Ads, Meta Ads, ongoing monitoring and clear reports show which messages, audiences and channels are truly working for reach and conversions.',
+          metrics: [['Meta', 'Ads'], ['Google', 'Ads'], ['ROI', 'Focus']]
+        },
+        web: {
+          eyebrow: 'Web Design & Webshop Content',
+          title: 'Websites and shops that connect brand, search and buying decisions.',
+          copy: 'Website copy, keyword research, basic SEO, product communication and campaign logic work together so digital touchpoints stay clear, useful and consistent with the brand.',
+          metrics: [['SEO', 'Basics'], ['Ads', 'Aligned'], ['UX', 'Clarity']]
+        }
+      }
+    };
+
+    function updateShowcase(key, animate = true) {
+      const data = showcaseData[currentLanguage][key];
+      const fields = [
+        ['showcase-eyebrow', data.eyebrow],
+        ['showcase-title', data.title],
+        ['showcase-copy', data.copy],
+        ['showcase-metric-a', data.metrics[0][0]],
+        ['showcase-label-a', data.metrics[0][1]],
+        ['showcase-metric-b', data.metrics[1][0]],
+        ['showcase-label-b', data.metrics[1][1]],
+        ['showcase-metric-c', data.metrics[2][0]],
+        ['showcase-label-c', data.metrics[2][1]]
+      ];
+
+      if (!animate || !window.gsap) {
+        fields.forEach(([id, value]) => {
+          document.getElementById(id).textContent = value;
+        });
+        return;
+      }
+
+      gsap.to(fields.map(([id]) => document.getElementById(id)), {
+        opacity: 0,
+        y: 10,
+        duration: 0.18,
+        ease: 'power2.out',
+        onComplete: () => {
+          fields.forEach(([id, value]) => {
+            document.getElementById(id).textContent = value;
+          });
+          gsap.to(fields.map(([id]) => document.getElementById(id)), {
+            opacity: 1,
+            y: 0,
+            duration: 0.35,
+            stagger: 0.03,
+            ease: 'power2.out'
+          });
+        }
+      });
+    }
+
+    function updateMailLinks() {
+      document.querySelectorAll('[data-mail-subject]').forEach((link) => {
+        const subject = encodeURIComponent(translate(link.dataset.mailSubject));
+        link.href = `mailto:mayrleindesign@gmail.com?subject=${subject}`;
+      });
+    }
+
+    function setLanguage(language, animateShowcase = true) {
+      currentLanguage = language;
+      document.documentElement.lang = language;
+      document.title = translations[language].meta.title;
+      document.querySelector('meta[name="description"]').setAttribute('content', translations[language].meta.description);
+      document.querySelector('nav').setAttribute('aria-label', translations[language].meta.navLabel);
+
+      document.querySelectorAll('[data-i18n]').forEach((element) => {
+        element.textContent = translate(element.dataset.i18n);
+      });
+
+      document.querySelectorAll('.lang-button').forEach((button) => {
+        const isActive = button.dataset.lang === language;
+        button.classList.toggle('active', isActive);
+        button.setAttribute('aria-pressed', String(isActive));
+      });
+
+      updateMailLinks();
+      const activeTab = document.querySelector('.tab-button.active')?.dataset.tab || 'social';
+      updateShowcase(activeTab, animateShowcase);
+      if (window.ScrollTrigger) {
+        ScrollTrigger.refresh();
+      }
+    }
+
+    document.querySelectorAll('.tab-button').forEach((button) => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.tab-button').forEach((item) => item.classList.remove('active'));
+        button.classList.add('active');
+        updateShowcase(button.dataset.tab);
+      });
+    });
+
+    document.querySelectorAll('.lang-button').forEach((button) => {
+      button.addEventListener('click', () => {
+        setLanguage(button.dataset.lang);
+        const url = new URL(window.location.href);
+        url.searchParams.set('lang', button.dataset.lang);
+        window.history.replaceState({}, '', url);
+      });
+    });
+
+    document.querySelectorAll('.premium-card, .showcase-screen').forEach((card) => {
+      const light = card.querySelector('.magnetic-light');
+      if (!light) return;
+      card.addEventListener('pointermove', (event) => {
+        const rect = card.getBoundingClientRect();
+        light.style.left = `${event.clientX - rect.left}px`;
+        light.style.top = `${event.clientY - rect.top}px`;
+      });
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from('.hero-kicker, .hero-title, .hero-copy, .hero-actions, .hero-stats, .hero-visual', {
+      opacity: 0,
+      y: 32,
+      duration: 0.8,
+      stagger: 0.09,
+      ease: 'power3.out'
+    });
+
+    gsap.utils.toArray('.reveal-section').forEach((section) => {
+      gsap.from(section, {
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: section,
+          start: 'top 82%',
+          once: true
+        }
+      });
+    });
+
+    gsap.utils.toArray('.stagger-grid').forEach((grid) => {
+      gsap.from(grid.children, {
+        opacity: 0,
+        y: 30,
+        duration: 0.75,
+        stagger: 0.1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: grid,
+          start: 'top 84%',
+          once: true
+        }
+      });
+    });
+
+    const requestedLanguage = new URLSearchParams(window.location.search).get('lang');
+    setLanguage(requestedLanguage === 'en' ? 'en' : 'de', false);
+  </script>
+</body>
+</html>
