@@ -342,7 +342,16 @@
     }
 
     .policy-modal-panel {
-      max-height: min(82vh, 920px);
+      max-height: min(82dvh, 920px);
+      overflow-y: auto;
+      overflow-x: hidden;
+      overscroll-behavior: contain;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .policy-close-button {
+      z-index: 2;
+      box-shadow: 0 12px 30px rgba(18, 21, 31, 0.12);
     }
 
     .app-icon {
@@ -352,6 +361,21 @@
       overflow: hidden;
       object-fit: cover;
       box-shadow: 0 18px 42px rgba(18, 21, 31, 0.18);
+    }
+
+    .hero-stats .glass {
+      min-width: 0;
+    }
+
+    .hero-stats strong {
+      display: block;
+      line-height: 1;
+    }
+
+    .hero-stats span {
+      display: block;
+      overflow-wrap: anywhere;
+      word-break: break-word;
     }
 
     @media (max-width: 640px) {
@@ -413,12 +437,16 @@
       }
 
       .hero-stats .glass {
-        padding: 0.75rem;
+        padding: 0.7rem 0.55rem;
+      }
+
+      .hero-stats strong {
+        font-size: 1.35rem;
       }
 
       .hero-stats span {
-        font-size: 0.66rem;
-        line-height: 1.25;
+        font-size: 0.58rem;
+        line-height: 1.2;
         letter-spacing: 0.02em;
       }
 
@@ -445,13 +473,9 @@
         border-radius: 1.35rem;
       }
 
-      .policy-modal-panel > div:first-child {
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      .policy-modal-panel [data-privacy-close] {
-        align-self: flex-start;
+      .policy-close-button {
+        right: 0.9rem;
+        top: 0.9rem;
       }
 
       .policy-content h3 {
@@ -810,19 +834,23 @@
 
   <div id="privacy-policy" class="policy-modal fixed inset-0 z-[90] hidden px-4 py-6 md:px-6" role="dialog" aria-modal="true" aria-labelledby="privacy-title" aria-describedby="privacy-intro">
     <div class="flex min-h-full items-center justify-center">
-      <article class="policy-modal-panel glass w-full max-w-5xl overflow-hidden rounded-[2rem]">
-        <div class="flex items-start justify-between gap-5 border-b border-ink/10 p-6 md:p-8">
-          <div class="flex min-w-0 flex-col gap-5 sm:flex-row sm:items-center">
+      <article class="policy-modal-panel glass relative flex w-full max-w-5xl flex-col rounded-[2rem]">
+        <div class="border-b border-ink/10 p-6 pr-16 md:p-8 md:pr-24">
+          <div class="flex min-w-0 flex-col items-start gap-3 md:flex-row md:items-center md:gap-5">
             <img class="app-icon shrink-0" src="assets/piltid_new.png" alt="Piltid app icon" />
-            <div>
+            <div class="min-w-0 flex-1">
               <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-copper" data-i18n="privacy.eyebrow">Piltid App</p>
               <h2 id="privacy-title" class="font-display text-3xl font-bold leading-tight md:text-5xl" data-i18n="privacy.title">Datenschutzrichtlinie für Piltid</h2>
               <p id="privacy-intro" class="mt-4 max-w-3xl text-base leading-7 text-ink/66 md:text-lg md:leading-8" data-i18n="privacy.intro">App-spezifische Datenschutzinformationen für Piltid in deutscher und englischer Sprache.</p>
             </div>
           </div>
-          <button class="shrink-0 rounded-full border border-ink/10 bg-white/70 px-4 py-2 text-sm font-bold text-ink transition hover:bg-white" type="button" data-privacy-close data-i18n="privacy.close">Schließen</button>
+          <button class="policy-close-button absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full border border-ink/10 bg-white/80 text-xl font-semibold text-ink transition hover:bg-white md:right-6 md:top-6 md:h-auto md:w-auto md:px-4 md:py-2 md:text-sm md:font-bold" type="button" data-privacy-close aria-label="Schließen">
+            <span class="leading-none md:hidden" aria-hidden="true">×</span>
+            <span class="hidden md:inline" data-i18n="privacy.close">Schließen</span>
+            <span class="sr-only" data-i18n="privacy.close">Schließen</span>
+          </button>
         </div>
-        <div class="max-h-[62vh] overflow-y-auto p-6 pb-12 md:p-8 md:pb-14">
+        <div class="p-6 pb-12 md:p-8 md:pb-14">
           <div id="privacy-content" class="policy-content"></div>
         </div>
       </article>
@@ -1189,7 +1217,7 @@
         },
         {
           title: 'Controller',
-          paragraphs: ['Mayrlein Design · Lisa Mayrhofer, Salzburg, Austria, mayrleindesign@gmail.com']
+          paragraphs: ['Mayrlein Design · Lisa Mayrhofer, Auerspergstr. 37, 5020 Salzburg, Austria, mayrleindesign@gmail.com']
         },
         {
           title: 'Summary',
@@ -1404,10 +1432,13 @@
     });
 
     document.querySelectorAll('[data-privacy-close]').forEach((trigger) => {
-      trigger.addEventListener('click', () => closePrivacyPolicy());
+      trigger.addEventListener('click', (event) => {
+        event.stopPropagation();
+        closePrivacyPolicy();
+      });
     });
 
-    document.getElementById('privacy-policy')?.addEventListener('click', (event) => {
+    document.getElementById('privacy-policy')?.addEventListener('pointerdown', (event) => {
       if (!event.target.closest('.policy-modal-panel')) {
         closePrivacyPolicy();
       }
