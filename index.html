@@ -171,6 +171,7 @@
       overflow: hidden;
     }
 
+    .premium-card > :not(.magnetic-light),
     .magnetic-card > :not(.magnetic-light) {
       position: relative;
       z-index: 1;
@@ -178,6 +179,13 @@
 
     .timeline-line {
       background: linear-gradient(to bottom, rgba(200, 121, 71, 0.15), rgba(29, 138, 138, 0.62), rgba(255, 111, 97, 0.12));
+    }
+
+    .timeline-date {
+      min-width: 8.75rem;
+      flex-shrink: 0;
+      text-align: center;
+      white-space: nowrap;
     }
 
     .lang-button {
@@ -193,11 +201,11 @@
 
     .magnetic-light {
       position: absolute;
-      width: 19rem;
-      height: 19rem;
+      width: 10rem;
+      height: 10rem;
       border-radius: 999px;
       pointer-events: none;
-      background: radial-gradient(circle, rgba(255, 255, 255, 0.24), transparent 65%);
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.32), transparent 66%);
       transform: translate(-50%, -50%);
       opacity: 0;
       transition: opacity 250ms ease;
@@ -359,7 +367,8 @@
         </div>
 
         <div class="hero-visual relative">
-          <div class="glass-dark overflow-hidden rounded-[2rem] p-5 md:p-7">
+          <div class="magnetic-card glass-dark rounded-[2rem] p-5 md:p-7">
+            <div class="magnetic-light"></div>
             <div class="mb-6 flex items-center justify-between">
               <div>
                 <p class="text-sm font-semibold text-white/50" data-i18n="visual.eyebrow">Brand command center</p>
@@ -516,58 +525,64 @@
         <div class="relative">
           <div class="timeline-line absolute left-4 top-0 hidden h-full w-px md:block"></div>
           <div class="stagger-grid space-y-5 md:pl-12">
-            <article class="glass rounded-[1.5rem] p-6 md:p-7">
+            <article class="magnetic-card glass rounded-[1.5rem] p-6 md:p-7">
+              <div class="magnetic-light"></div>
               <div class="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                 <div>
                   <h3 class="font-display text-2xl font-bold" data-i18n="experience.drTitle">Digital Marketing Managerin · Dr. Spiller GmbH</h3>
                   <p class="mt-2 text-ink/62" data-i18n="experience.drCopy">Contentplanung, Reels, Stories, Newsletter, Website, Webshop, Google Ads, Meta Ads, Produktkommunikation und Launchkampagnen.</p>
                 </div>
-                <span class="rounded-full bg-ink px-4 py-2 text-sm font-bold text-white" data-i18n="date.present2025">2025 - heute</span>
+                <span class="timeline-date rounded-full bg-ink px-4 py-2 text-sm font-bold text-white" data-i18n="date.present2025">2025 - heute</span>
               </div>
             </article>
-            <article class="glass rounded-[1.5rem] p-6 md:p-7">
+            <article class="magnetic-card glass rounded-[1.5rem] p-6 md:p-7">
+              <div class="magnetic-light"></div>
               <div class="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                 <div>
                   <h3 class="font-display text-2xl font-bold" data-i18n="experience.selfTitle">Geschäftsführerin · Lisa Mayrhofer</h3>
                   <p class="mt-2 text-ink/62" data-i18n="experience.selfCopy">Selbstständige Werbeagentur für KMU, Superior-Hotels in Österreich und Community-getriebene Organisationen wie MSV Schwanenstadt.</p>
                 </div>
-                <span class="rounded-full bg-copper px-4 py-2 text-sm font-bold text-white" data-i18n="date.present2024">2024 - heute</span>
+                <span class="timeline-date rounded-full bg-copper px-4 py-2 text-sm font-bold text-white" data-i18n="date.present2024">2024 - heute</span>
               </div>
             </article>
-            <article class="glass rounded-[1.5rem] p-6 md:p-7">
+            <article class="magnetic-card glass rounded-[1.5rem] p-6 md:p-7">
+              <div class="magnetic-light"></div>
               <div class="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                 <div>
                   <h3 class="font-display text-2xl font-bold" data-i18n="experience.strategyTitle">Head of Digital Strategy · manufaktur²</h3>
                   <p class="mt-2 text-ink/62" data-i18n="experience.strategyCopy">Markenentwicklung, Textkonzeption, Zielgruppendefinition, Social-Media-Strategie, Kanalaufbau, Reporting, Keyword-Recherche und Google Ads.</p>
                 </div>
-                <span class="rounded-full bg-teal px-4 py-2 text-sm font-bold text-white">2021 - 2024</span>
+                <span class="timeline-date rounded-full bg-teal px-4 py-2 text-sm font-bold text-white">2021 - 2024</span>
               </div>
             </article>
-            <article class="glass rounded-[1.5rem] p-6 md:p-7">
+            <article class="magnetic-card glass rounded-[1.5rem] p-6 md:p-7">
+              <div class="magnetic-light"></div>
               <div class="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                 <div>
                   <h3 class="font-display text-2xl font-bold" data-i18n="experience.wugerTitle">Social Media Managerin · WUGER Brands in Motion</h3>
                   <p class="mt-2 text-ink/62" data-i18n="experience.wugerCopy">Social Media Konzeption und Management für internationale Kunden aus Automotive, Maschinenbau und Gartenbau inklusive Employer und Product Branding.</p>
                 </div>
-                <span class="rounded-full bg-ink px-4 py-2 text-sm font-bold text-white">2018 - 2021</span>
+                <span class="timeline-date rounded-full bg-ink px-4 py-2 text-sm font-bold text-white">2018 - 2021</span>
               </div>
             </article>
-            <article class="glass rounded-[1.5rem] p-6 md:p-7">
+            <article class="magnetic-card glass rounded-[1.5rem] p-6 md:p-7">
+              <div class="magnetic-light"></div>
               <div class="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                 <div>
                   <h3 class="font-display text-2xl font-bold" data-i18n="experience.prTitle">PR, Online-Marketing &amp; Webdesign · Salzburg und München</h3>
                   <p class="mt-2 text-ink/62" data-i18n="experience.prCopy">PR-Beratung, Employer Branding, Grafikdesign, Layout, Webdesign, Eventbetreuung und Pressearbeit nach dem BA-Studium Journalismus und PR.</p>
                 </div>
-                <span class="rounded-full bg-coral px-4 py-2 text-sm font-bold text-white">2013 - 2018</span>
+                <span class="timeline-date rounded-full bg-coral px-4 py-2 text-sm font-bold text-white">2013 - 2018</span>
               </div>
             </article>
-            <article class="glass rounded-[1.5rem] p-6 md:p-7">
+            <article class="magnetic-card glass rounded-[1.5rem] p-6 md:p-7">
+              <div class="magnetic-light"></div>
               <div class="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                 <div>
                   <h3 class="font-display text-2xl font-bold" data-i18n="experience.educationTitle">Ausbildung · FH JOANNEUM</h3>
                   <p class="mt-2 text-ink/62" data-i18n="experience.educationCopy">Bachelor of Arts in Social Sciences (B.A.), Journalismus und Public Relations.</p>
                 </div>
-                <span class="rounded-full bg-ink px-4 py-2 text-sm font-bold text-white">2013 - 2016</span>
+                <span class="timeline-date rounded-full bg-ink px-4 py-2 text-sm font-bold text-white">2013 - 2016</span>
               </div>
             </article>
           </div>
