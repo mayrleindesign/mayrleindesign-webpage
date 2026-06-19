@@ -237,6 +237,53 @@
       background: rgba(255, 255, 255, 0.86);
     }
 
+    .policy-content h3 {
+      margin-top: 2rem;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .policy-content h3:first-child {
+      margin-top: 0;
+    }
+
+    .policy-content p,
+    .policy-content li {
+      color: rgba(18, 21, 31, 0.68);
+      line-height: 1.75;
+    }
+
+    .policy-content p {
+      margin-top: 0.9rem;
+    }
+
+    .policy-content ul {
+      margin-top: 0.9rem;
+      list-style: disc;
+      padding-left: 1.35rem;
+    }
+
+    .policy-content strong {
+      color: var(--ink);
+    }
+
+    .policy-content::after {
+      content: "";
+      display: block;
+      height: 2.5rem;
+    }
+
+    .policy-modal {
+      background: rgba(18, 21, 31, 0.62);
+      backdrop-filter: blur(18px);
+    }
+
+    .policy-modal-panel {
+      max-height: min(82vh, 920px);
+    }
+
     @media (max-width: 640px) {
       .showcase-screen {
         min-height: 560px;
@@ -265,7 +312,8 @@
         <a class="transition hover:text-copper" href="#services" data-i18n="nav.services">Services</a>
         <a class="transition hover:text-copper" href="#showcase" data-i18n="nav.portfolio">Portfolio</a>
         <a class="transition hover:text-copper" href="#experience" data-i18n="nav.experience">Erfahrung</a>
-        <a class="transition hover:text-copper" href="#support">App Support</a>
+        <a class="transition hover:text-copper" href="#support" data-i18n="nav.support">App Support</a>
+        <a class="transition hover:text-copper" href="#privacy-policy" data-privacy-trigger data-i18n="nav.privacy">Datenschutz</a>
       </div>
       <div class="flex items-center gap-2">
         <div class="flex rounded-full border border-ink/10 bg-white/48 p-1" aria-label="Language selection">
@@ -603,11 +651,14 @@
               <div class="rounded-3xl bg-white/56 p-6">
                 <h3 class="font-display text-2xl font-bold" data-i18n="support.supportTitle">App Support</h3>
                 <p class="mt-4 leading-7 text-ink/66" data-i18n="support.copy">Für Fragen zu Apps, Support-Anliegen, Datenschutzkommunikation oder technischen Rückmeldungen erreichst du mich per E-Mail.</p>
-                <a class="mt-5 inline-flex font-bold text-teal" href="mailto:mayrleindesign@gmail.com?subject=App%20Support%20Anfrage" data-i18n="support.cta" data-mail-subject="support.subject">App Support kontaktieren</a>
+                <div class="mt-5 flex flex-col items-start gap-3">
+                  <a class="inline-flex font-bold text-teal" href="mailto:mayrleindesign@gmail.com?subject=App%20Support%20Anfrage" data-i18n="support.cta" data-mail-subject="support.subject">App Support kontaktieren</a>
+                  <button class="inline-flex text-left font-bold text-coral" type="button" data-privacy-trigger data-i18n="support.privacyCta">Piltid Datenschutzrichtlinie öffnen</button>
+                </div>
               </div>
               <div class="rounded-3xl bg-ink p-6 text-white">
                 <h3 class="font-display text-2xl font-bold" data-i18n="support.privacyTitle">Datenschutz</h3>
-                <p class="mt-4 text-sm font-semibold leading-6 text-white/64" data-i18n="support.privacyCopy">Diese Support-Seite verarbeitet keine Eingaben direkt im Browser und setzt kein eigenes Tracking ein. Wenn du per E-Mail Kontakt aufnimmst, werden deine E-Mail-Adresse und Nachricht ausschließlich zur Bearbeitung der Anfrage verwendet. App-spezifische Datenschutzangaben müssen vor Veröffentlichung an die tatsächliche Datenverarbeitung der jeweiligen App angepasst werden.</p>
+                <p class="mt-4 text-sm font-semibold leading-6 text-white/64" data-i18n="support.privacyCopy">Diese Webseite verarbeitet keine Eingaben direkt im Browser und setzt kein eigenes Tracking ein. Wenn du per E-Mail Kontakt aufnimmst, werden deine E-Mail-Adresse und Nachricht ausschließlich zur Bearbeitung der Anfrage verwendet.</p>
                 <dl class="mt-4 space-y-3 text-sm text-white/68">
                   <div><dt class="font-bold text-white" data-i18n="support.operatorLabel">Operator</dt><dd>Mayrlein Design · Lisa Mayrhofer</dd></div>
                   <div><dt class="font-bold text-white" data-i18n="support.locationLabel">Standort</dt><dd data-i18n="contact.location">Salzburg, Österreich</dd></div>
@@ -621,10 +672,32 @@
     </section>
   </main>
 
+  <div id="privacy-policy" class="policy-modal fixed inset-0 z-[90] hidden px-4 py-6 md:px-6" role="dialog" aria-modal="true" aria-labelledby="privacy-title" aria-describedby="privacy-intro">
+    <div class="flex min-h-full items-center justify-center">
+      <article class="policy-modal-panel glass w-full max-w-5xl overflow-hidden rounded-[2rem]">
+        <div class="flex items-start justify-between gap-5 border-b border-ink/10 p-6 md:p-8">
+          <div>
+            <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-copper" data-i18n="privacy.eyebrow">Piltid App</p>
+            <h2 id="privacy-title" class="font-display text-3xl font-bold leading-tight md:text-5xl" data-i18n="privacy.title">Datenschutzrichtlinie für Piltid</h2>
+            <p id="privacy-intro" class="mt-4 max-w-3xl text-base leading-7 text-ink/66 md:text-lg md:leading-8" data-i18n="privacy.intro">App-spezifische Datenschutzinformationen für Piltid in deutscher und englischer Sprache.</p>
+          </div>
+          <button class="shrink-0 rounded-full border border-ink/10 bg-white/70 px-4 py-2 text-sm font-bold text-ink transition hover:bg-white" type="button" data-privacy-close data-i18n="privacy.close">Schließen</button>
+        </div>
+        <div class="max-h-[62vh] overflow-y-auto p-6 pb-12 md:p-8 md:pb-14">
+          <div id="privacy-content" class="policy-content"></div>
+        </div>
+      </article>
+    </div>
+  </div>
+
   <footer class="px-4 pb-8 md:px-6 lg:px-8">
     <div class="mx-auto flex max-w-7xl flex-col justify-between gap-3 border-t border-ink/10 pt-6 text-sm font-semibold text-ink/54 md:flex-row">
       <p data-i18n="footer.copy">© 2026 Lisa Mayrhofer. Digital Marketing, Social Media, Performance &amp; Web Design.</p>
-      <p data-i18n="footer.mantra">#gerneperDu · Daten, Daten, Daten.</p>
+      <div class="flex flex-col gap-2 md:flex-row md:items-center md:gap-5">
+        <a class="transition hover:text-copper" href="#support" data-i18n="footer.support">App Support</a>
+        <a class="transition hover:text-copper" href="#privacy-policy" data-privacy-trigger data-i18n="footer.privacy">App-Datenschutzrichtlinien</a>
+        <p data-i18n="footer.mantra">#gerneperDu · Daten, Daten, Daten.</p>
+      </div>
     </div>
   </footer>
 
@@ -644,6 +717,8 @@
           services: 'Services',
           portfolio: 'Portfolio',
           experience: 'Erfahrung',
+          support: 'App Support',
+          privacy: 'Datenschutz',
           cta: 'Kontakt',
           ctaSubject: 'Kontaktanfrage über Website'
         },
@@ -733,18 +808,27 @@
         support: {
           eyebrow: 'App Support & Datenschutzkontakt',
           title: 'Support- und Datenschutzseite für Apps von Mayrlein Design.',
-          supportTitle: 'App Support',
+          supportTitle: 'App Support und Datenschutzrichtlinien',
           copy: 'Für Fragen zu Apps, Support-Anliegen, Datenschutzkommunikation oder technischen Rückmeldungen erreichst du mich per E-Mail.',
           cta: 'App Support kontaktieren',
           subject: 'App Support Anfrage',
           privacyTitle: 'Datenschutz',
-          privacyCopy: 'Diese Support-Seite verarbeitet keine Eingaben direkt im Browser und setzt kein eigenes Tracking ein. Wenn du per E-Mail Kontakt aufnimmst, werden deine E-Mail-Adresse und Nachricht ausschließlich zur Bearbeitung der Anfrage verwendet. App-spezifische Datenschutzangaben müssen vor Veröffentlichung an die tatsächliche Datenverarbeitung der jeweiligen App angepasst werden.',
+          privacyCopy: 'Diese Support-Seite verarbeitet keine Eingaben direkt im Browser und setzt kein eigenes Tracking ein. Wenn du per E-Mail Kontakt aufnimmst, werden deine E-Mail-Adresse und Nachricht ausschließlich zur Bearbeitung der Anfrage verwendet.',
+          privacyCta: 'Piltid Datenschutzrichtlinie öffnen',
           operatorLabel: 'Operator',
           locationLabel: 'Standort',
           emailLabel: 'E-Mail'
         },
+        privacy: {
+          eyebrow: 'Piltid App',
+          title: 'Datenschutzrichtlinie für Piltid',
+          intro: 'App-spezifische Datenschutzinformationen für Piltid in deutscher und englischer Sprache.',
+          close: 'Schließen'
+        },
         footer: {
           copy: '© 2026 Lisa Mayrhofer. Digital Marketing, Social Media, Performance & Web Design.',
+          support: 'App Support',
+          privacy: 'App-Datenschutzrichtlinien',
           mantra: '#gerneperDu · Daten, Daten, Daten.'
         }
       },
@@ -758,6 +842,8 @@
           services: 'Services',
           portfolio: 'Portfolio',
           experience: 'Experience',
+          support: 'App Support',
+          privacy: 'Privacy',
           cta: 'Contact',
           ctaSubject: 'Contact request via website'
         },
@@ -847,25 +933,308 @@
         support: {
           eyebrow: 'App Support & Privacy Contact',
           title: 'Support and privacy page for apps by Mayrlein Design.',
-          supportTitle: 'App Support',
+          supportTitle: 'App Support and Privacy Policies',
           copy: 'For app questions, support requests, privacy communication or technical feedback, you can reach me by email.',
           cta: 'Contact app support',
           subject: 'App support request',
           privacyTitle: 'Privacy Policy',
-          privacyCopy: 'This support page does not process form entries directly in the browser and does not use first-party tracking. If you contact us by email, your email address and message are used only to process your request. App-specific privacy information must be updated before release to reflect the actual data processing of each app.',
+          privacyCopy: 'This webpage does not process form entries directly in the browser and does not use first-party tracking. If you contact us by email, your email address and message are used only to process your request.',
+          privacyCta: 'Open the Piltid privacy policy',
           operatorLabel: 'Operator',
           locationLabel: 'Location',
           emailLabel: 'Email'
         },
+        privacy: {
+          eyebrow: 'Piltid App',
+          title: 'Privacy Policy for Piltid',
+          intro: 'App-specific privacy information for Piltid in German and English.',
+          close: 'Close'
+        },
         footer: {
           copy: '© 2026 Lisa Mayrhofer. Digital Marketing, Social Media, Performance & Web Design.',
+          support: 'App Support',
+          privacy: 'App Privacy Policies',
           mantra: '#gerneperDu · Data, data, data.'
         }
       }
     };
 
+    const privacyPolicy = {
+      de: [
+        {
+          title: 'Stand',
+          paragraphs: ['19. Juni 2026']
+        },
+        {
+          title: 'Verantwortlich',
+          paragraphs: ['Mayrlein Design · Lisa Mayrhofer, Salzburg, Österreich, mayrleindesign@gmail.com']
+        },
+        {
+          title: 'Kurzfassung',
+          paragraphs: ['Piltid speichert die Daten, die du in der App eingibst, auf deinem Gerät und, sofern iCloud verfügbar und aktiviert ist, über Apples iCloud/CloudKit in deinem iCloud-Konto. Die App betreibt kein eigenes Server-Backend, nutzt keine Werbenetzwerke und verwendet nach aktuellem Stand keine Drittanbieter-Analytics- oder Tracking-SDKs.']
+        },
+        {
+          title: 'Welche Daten verarbeitet werden',
+          paragraphs: ['Piltid kann folgende Daten speichern und verarbeiten:'],
+          list: [
+            'Einnahmeplan, Startdatum, aktuelle Packung und Zyklusinformationen',
+            'Erinnerungszeit, Zeitzone und Benachrichtigungseinstellungen',
+            'optionaler Vorname, wenn du personalisierte Benachrichtigungen aktivierst oder nutzt',
+            'Einnahmeverlauf, z. B. ob eine Einnahme als genommen, verspätet, verpasst, unsicher oder noch nicht dokumentiert markiert wurde',
+            'Zeitpunkte geplanter und dokumentierter Einnahmen',
+            'Einstellungen zu diskreten Benachrichtigungen, starken Erinnerungen/Alarmen und Placebo- bzw. Pausentagen',
+            'technische Statusinformationen innerhalb der Diagnoseansicht, z. B. Benachrichtigungsberechtigungen, iCloud-Verfügbarkeit und Widget-Status',
+            'Kauf- und Berechtigungsstatus für In-App-Käufe, soweit dies über Apple StoreKit zur Freischaltung von Funktionen erforderlich ist'
+          ],
+          after: ['Diese Daten können Gesundheitsbezug haben, weil sie Rückschlüsse auf Medikamenteneinnahme, Einnahmeverhalten oder Routinen zulassen können.']
+        },
+        {
+          title: 'Zwecke der Verarbeitung',
+          paragraphs: ['Die Daten werden verarbeitet, um:'],
+          list: [
+            'deinen Einnahmeplan und deine Packungsansicht darzustellen',
+            'Erinnerungen, Folgeerinnerungen und optionale starke Alarme auszuführen',
+            'deinen Einnahmeverlauf und einfache Auswertungen innerhalb der App anzuzeigen',
+            'das Homescreen-Widget und Live-Activity-/Alarm-Funktionen mit aktuellem Status zu versorgen',
+            'deine App-Einstellungen zwischen App-Starts beizubehalten',
+            'optionale iCloud-Synchronisierung zwischen deinen eigenen Apple-Geräten zu ermöglichen',
+            'In-App-Käufe und Freischaltungen über Apple StoreKit zu prüfen',
+            'technische Diagnoseinformationen in der App anzuzeigen, wenn du diese Ansicht nutzt'
+          ],
+          after: ['Piltid verwendet deine Daten nicht für Werbung, Profiling oder den Verkauf an Dritte.']
+        },
+        {
+          title: 'Speicherung auf dem Gerät und in iCloud',
+          paragraphs: [
+            'Piltid speichert App-Daten lokal auf deinem Gerät. Wenn iCloud für dein Apple-Konto verfügbar ist und die App die iCloud-Synchronisierung nutzen kann, werden die App-Daten über Apple CloudKit mit deinem iCloud-Konto synchronisiert. Die Verarbeitung durch Apple richtet sich nach den Datenschutzbedingungen von Apple.',
+            'Wenn iCloud nicht verfügbar ist, verwendet Piltid lokale Speicherung auf dem jeweiligen Gerät.'
+          ]
+        },
+        {
+          title: 'Benachrichtigungen und Alarme',
+          paragraphs: ['Piltid nutzt lokale Benachrichtigungen und, wenn du starke Erinnerungen aktivierst, Alarmfunktionen des Betriebssystems. Benachrichtigungstexte können je nach Einstellung diskret sein oder deinen optional eingegebenen Vornamen enthalten. Du kannst Benachrichtigungsrechte jederzeit in den iOS-Einstellungen ändern.']
+        },
+        {
+          title: 'Widgets und Live-Aktivitäten',
+          paragraphs: ['Damit Widgets und Live-Aktivitäten den aktuellen Status anzeigen können, speichert Piltid eine reduzierte Momentaufnahme in einem gemeinsamen App-Container. Diese Momentaufnahme enthält insbesondere den aktuellen Tag im Zyklus, den Einnahmestatus und eine kurze Wochenübersicht. Sie wird lokal zwischen App und Widget geteilt.']
+        },
+        {
+          title: 'In-App-Käufe',
+          paragraphs: ['Piltid verwendet Apple StoreKit für In-App-Käufe, Testzeiträume, Freischaltungen und Wiederherstellung von Käufen. Zahlungsdaten werden nicht von Piltid verarbeitet oder gespeichert. Die Zahlungsabwicklung erfolgt durch Apple.']
+        },
+        {
+          title: 'Externe Links',
+          paragraphs: ['Die App kann einen externen PayPal-Link öffnen. Wenn du diesen Link nutzt, verlässt du die App. Für die dortige Datenverarbeitung ist PayPal verantwortlich.']
+        },
+        {
+          title: 'Keine Werbung, kein Tracking, keine eigenen Analytics',
+          paragraphs: [
+            'Nach aktuellem Stand der App werden keine Werbe-SDKs, keine Drittanbieter-Analytics und kein Tracking über Apps oder Webseiten anderer Anbieter eingesetzt. Piltid betreibt kein eigenes Nutzerkonto-System und kein eigenes Server-Backend.',
+            'Apple kann im Rahmen des App Store, von iCloud, StoreKit, Push-/Systemdiensten, Crash-Berichten oder Betriebssystemfunktionen eigene Daten verarbeiten. Darauf hat Piltid keinen direkten Zugriff, soweit Apple diese Daten nicht über standardisierte Entwicklerfunktionen bereitstellt.'
+          ]
+        },
+        {
+          title: 'Weitergabe von Daten',
+          paragraphs: [
+            'Piltid gibt deine in der App gespeicherten Einnahme- und Planungsdaten nicht aktiv an Dritte weiter. Eine Verarbeitung durch Apple kann stattfinden, wenn du iCloud, App Store, StoreKit, Benachrichtigungen oder andere Apple-Systemdienste nutzt.',
+            'Eine Weitergabe kann außerdem erfolgen, wenn dies gesetzlich vorgeschrieben ist oder du selbst Daten exportierst, teilst oder extern weitergibst.'
+          ]
+        },
+        {
+          title: 'Speicherdauer und Löschung',
+          paragraphs: [
+            'App-Daten bleiben gespeichert, solange du die App nutzt oder bis du sie innerhalb der App, über iOS-Funktionen oder durch Löschen der App entfernst. Daten, die über iCloud synchronisiert wurden, können auch in deinem iCloud-Konto verbleiben, bis sie dort gelöscht werden oder Apple sie nach den jeweils geltenden Bedingungen entfernt.',
+            'Du kannst die App löschen, iCloud-Funktionen in den iOS-Einstellungen verwalten oder dich mit einer Datenschutzanfrage an mayrleindesign@gmail.com wenden.'
+          ]
+        },
+        {
+          title: 'Deine Rechte',
+          paragraphs: [
+            'Je nach anwendbarem Recht, insbesondere der Datenschutz-Grundverordnung (DSGVO), kannst du Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch haben. Du kannst außerdem eine erteilte Einwilligung mit Wirkung für die Zukunft widerrufen.',
+            'Zur Ausübung deiner Rechte kontaktiere bitte mayrleindesign@gmail.com. Wenn du der Ansicht bist, dass die Verarbeitung deiner Daten gegen Datenschutzrecht verstößt, kannst du dich an eine Datenschutzaufsichtsbehörde wenden.'
+          ]
+        },
+        {
+          title: 'Medizinischer Hinweis',
+          paragraphs: ['Piltid ist ein Organisations- und Erinnerungstool. Die App ersetzt keine medizinische Beratung, Diagnose oder Behandlung. Wende dich bei medizinischen Fragen, Unsicherheiten zur Einnahme oder gesundheitlichen Beschwerden an medizinisches Fachpersonal.']
+        },
+        {
+          title: 'Änderungen',
+          paragraphs: ['Diese Datenschutzrichtlinie kann angepasst werden, wenn sich Funktionen der App, eingesetzte Dienste oder rechtliche Anforderungen ändern. Die jeweils aktuelle Fassung sollte auf der Webseite oder innerhalb der App bereitgestellt werden.']
+        }
+      ],
+      en: [
+        {
+          title: 'Effective Date',
+          paragraphs: ['June 19, 2026']
+        },
+        {
+          title: 'Controller',
+          paragraphs: ['Mayrlein Design · Lisa Mayrhofer, Salzburg, Austria, mayrleindesign@gmail.com']
+        },
+        {
+          title: 'Summary',
+          paragraphs: ['Piltid stores the data you enter in the app on your device and, where iCloud is available and enabled, in your iCloud account via Apple iCloud/CloudKit. The app does not operate its own server backend, does not use advertising networks and, according to the current implementation, does not use third-party analytics or tracking SDKs.']
+        },
+        {
+          title: 'Data Processed',
+          paragraphs: ['Piltid may store and process the following data:'],
+          list: [
+            'intake schedule, start date, current pack and cycle information',
+            'reminder time, time zone and notification settings',
+            'optional first name if you enable or use personalized notifications',
+            'intake history, for example whether an intake was marked as taken, late, missed, unsure or not yet documented',
+            'scheduled and documented intake times',
+            'settings for discreet notifications, strong reminders/alarms and placebo or break days',
+            'technical status information in the diagnostics view, such as notification permissions, iCloud availability and widget status',
+            'purchase and entitlement status for in-app purchases, where required via Apple StoreKit to unlock features'
+          ],
+          after: ['This data may be health-related because it can allow conclusions about medication intake, intake behavior or routines.']
+        },
+        {
+          title: 'Purposes of Processing',
+          paragraphs: ['The data is processed to:'],
+          list: [
+            'display your intake schedule and pack view',
+            'run reminders, follow-up reminders and optional strong alarms',
+            'show your intake history and simple in-app statistics',
+            'provide current status to the Home Screen widget and Live Activity/alarm features',
+            'keep your app settings between app launches',
+            'enable optional iCloud synchronization between your own Apple devices',
+            'verify in-app purchases and unlocks via Apple StoreKit',
+            'show technical diagnostics information in the app when you use that view'
+          ],
+          after: ['Piltid does not use your data for advertising, profiling or sale to third parties.']
+        },
+        {
+          title: 'Storage on Device and in iCloud',
+          paragraphs: [
+            'Piltid stores app data locally on your device. If iCloud is available for your Apple account and the app can use iCloud synchronization, app data is synchronized with your iCloud account via Apple CloudKit. Apple’s processing is governed by Apple’s privacy terms.',
+            'If iCloud is not available, Piltid uses local storage on the respective device.'
+          ]
+        },
+        {
+          title: 'Notifications and Alarms',
+          paragraphs: ['Piltid uses local notifications and, if you enable strong reminders, operating system alarm features. Depending on your settings, notification text may be discreet or may include the optional first name you entered. You can change notification permissions at any time in iOS Settings.']
+        },
+        {
+          title: 'Widgets and Live Activities',
+          paragraphs: ['To let widgets and Live Activities display the current status, Piltid stores a reduced snapshot in a shared app container. This snapshot includes in particular the current day in the cycle, intake status and a short weekly overview. It is shared locally between the app and widget.']
+        },
+        {
+          title: 'In-App Purchases',
+          paragraphs: ['Piltid uses Apple StoreKit for in-app purchases, trial periods, unlocks and restoring purchases. Payment data is not processed or stored by Piltid. Payment processing is handled by Apple.']
+        },
+        {
+          title: 'External Links',
+          paragraphs: ['The app may open an external PayPal link. If you use this link, you leave the app. PayPal is responsible for data processing there.']
+        },
+        {
+          title: 'No Advertising, Tracking or First-Party Analytics',
+          paragraphs: [
+            'According to the current implementation, no advertising SDKs, third-party analytics or tracking across apps or websites of other providers are used. Piltid does not operate its own user account system or server backend.',
+            'Apple may process its own data in connection with the App Store, iCloud, StoreKit, push/system services, crash reports or operating system features. Piltid has no direct access to such data unless Apple provides it through standardized developer functions.'
+          ]
+        },
+        {
+          title: 'Disclosure of Data',
+          paragraphs: [
+            'Piltid does not actively disclose the intake and planning data stored in the app to third parties. Processing by Apple may take place when you use iCloud, the App Store, StoreKit, notifications or other Apple system services.',
+            'Disclosure may also occur if required by law or if you export, share or otherwise disclose data yourself.'
+          ]
+        },
+        {
+          title: 'Retention and Deletion',
+          paragraphs: [
+            'App data remains stored as long as you use the app or until you remove it within the app, through iOS functions or by deleting the app. Data synchronized via iCloud may also remain in your iCloud account until it is deleted there or removed by Apple under the applicable terms.',
+            'You can delete the app, manage iCloud features in iOS Settings or send a privacy request to mayrleindesign@gmail.com.'
+          ]
+        },
+        {
+          title: 'Your Rights',
+          paragraphs: [
+            'Depending on applicable law, in particular the General Data Protection Regulation (GDPR), you may have rights of access, rectification, erasure, restriction of processing, data portability and objection. You may also withdraw consent with effect for the future.',
+            'To exercise your rights, please contact mayrleindesign@gmail.com. If you believe that the processing of your data violates data protection law, you may contact a data protection supervisory authority.'
+          ]
+        },
+        {
+          title: 'Medical Notice',
+          paragraphs: ['Piltid is an organization and reminder tool. The app does not replace medical advice, diagnosis or treatment. If you have medical questions, uncertainties about intake or health complaints, contact qualified medical professionals.']
+        },
+        {
+          title: 'Changes',
+          paragraphs: ['This privacy policy may be updated if app features, services used or legal requirements change. The latest version should be made available on the website or inside the app.']
+        }
+      ]
+    };
+
     function translate(path) {
       return path.split('.').reduce((value, key) => value && value[key], translations[currentLanguage]) || '';
+    }
+
+    function addPolicyParagraph(section, text) {
+      const paragraph = document.createElement('p');
+      paragraph.textContent = text;
+      section.appendChild(paragraph);
+    }
+
+    function renderPrivacyPolicy() {
+      const container = document.getElementById('privacy-content');
+      if (!container) return;
+      container.replaceChildren();
+
+      privacyPolicy[currentLanguage].forEach((item) => {
+        const section = document.createElement('section');
+        const heading = document.createElement('h3');
+        heading.textContent = item.title;
+        section.appendChild(heading);
+
+        item.paragraphs?.forEach((text) => addPolicyParagraph(section, text));
+
+        if (item.list) {
+          const list = document.createElement('ul');
+          item.list.forEach((text) => {
+            const entry = document.createElement('li');
+            entry.textContent = text;
+            list.appendChild(entry);
+          });
+          section.appendChild(list);
+        }
+
+        item.after?.forEach((text) => addPolicyParagraph(section, text));
+        container.appendChild(section);
+      });
+    }
+
+    let privacyReturnFocus = null;
+
+    function openPrivacyPolicy(updateHash = true) {
+      const modal = document.getElementById('privacy-policy');
+      if (!modal) return;
+
+      privacyReturnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      modal.querySelector('[data-privacy-close]')?.focus();
+
+      if (updateHash && window.location.hash !== '#privacy-policy') {
+        window.history.pushState({}, '', '#privacy-policy');
+      }
+    }
+
+    function closePrivacyPolicy(updateHash = true) {
+      const modal = document.getElementById('privacy-policy');
+      if (!modal) return;
+
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+
+      if (updateHash && window.location.hash === '#privacy-policy') {
+        window.history.replaceState({}, '', window.location.pathname + window.location.search);
+      }
+
+      privacyReturnFocus?.focus();
+      privacyReturnFocus = null;
     }
 
     const showcaseData = {
@@ -977,6 +1346,7 @@
       });
 
       updateMailLinks();
+      renderPrivacyPolicy();
       const activeTab = document.querySelector('.tab-button.active')?.dataset.tab || 'social';
       updateShowcase(activeTab, animateShowcase);
       if (window.ScrollTrigger) {
@@ -999,6 +1369,38 @@
         url.searchParams.set('lang', button.dataset.lang);
         window.history.replaceState({}, '', url);
       });
+    });
+
+    document.querySelectorAll('[data-privacy-trigger]').forEach((trigger) => {
+      trigger.addEventListener('click', (event) => {
+        event.preventDefault();
+        openPrivacyPolicy();
+      });
+    });
+
+    document.querySelectorAll('[data-privacy-close]').forEach((trigger) => {
+      trigger.addEventListener('click', () => closePrivacyPolicy());
+    });
+
+    document.getElementById('privacy-policy')?.addEventListener('click', (event) => {
+      if (!event.target.closest('.policy-modal-panel')) {
+        closePrivacyPolicy();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      const modal = document.getElementById('privacy-policy');
+      if (event.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
+        closePrivacyPolicy();
+      }
+    });
+
+    window.addEventListener('popstate', () => {
+      if (window.location.hash === '#privacy-policy') {
+        openPrivacyPolicy(false);
+      } else {
+        closePrivacyPolicy(false);
+      }
     });
 
     document.querySelectorAll('.premium-card, .showcase-screen').forEach((card) => {
@@ -1052,6 +1454,9 @@
 
     const requestedLanguage = new URLSearchParams(window.location.search).get('lang');
     setLanguage(requestedLanguage === 'en' ? 'en' : 'de', false);
+    if (window.location.hash === '#privacy-policy') {
+      openPrivacyPolicy(false);
+    }
   </script>
 </body>
 </html>
