@@ -238,15 +238,20 @@
     }
 
     .policy-content h3 {
-      margin-top: 2rem;
       font-family: "Space Grotesk", sans-serif;
       font-size: 1.35rem;
       font-weight: 700;
       color: var(--ink);
     }
 
-    .policy-content h3:first-child {
-      margin-top: 0;
+    .policy-content section {
+      padding-bottom: 1.65rem;
+      margin-bottom: 1.65rem;
+      border-bottom: 1px solid rgba(18, 21, 31, 0.1);
+    }
+
+    .policy-content section:last-child {
+      border-bottom: 0;
     }
 
     .policy-content p,
@@ -284,9 +289,23 @@
       max-height: min(82vh, 920px);
     }
 
+    .app-icon {
+      width: 5.75rem;
+      height: 5.75rem;
+      border-radius: 24%;
+      overflow: hidden;
+      object-fit: cover;
+      box-shadow: 0 18px 42px rgba(18, 21, 31, 0.18);
+    }
+
     @media (max-width: 640px) {
       .showcase-screen {
         min-height: 560px;
+      }
+
+      .app-icon {
+        width: 4.5rem;
+        height: 4.5rem;
       }
     }
 
@@ -645,7 +664,7 @@
           <div class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
               <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-copper" data-i18n="support.eyebrow">App Support &amp; Datenschutzkontakt</p>
-              <h2 class="font-display text-4xl font-bold leading-tight md:text-5xl" data-i18n="support.title">Support- und Datenschutzseite für Apps von Mayrlein Design.</h2>
+              <h2 class="font-display text-4xl font-bold leading-tight md:text-5xl" data-i18n="support.title">Support- und Datenschutzabschnitt für Apps von Mayrlein Design.</h2>
             </div>
             <div class="grid gap-4 md:grid-cols-2">
               <div class="rounded-3xl bg-white/56 p-6">
@@ -676,10 +695,13 @@
     <div class="flex min-h-full items-center justify-center">
       <article class="policy-modal-panel glass w-full max-w-5xl overflow-hidden rounded-[2rem]">
         <div class="flex items-start justify-between gap-5 border-b border-ink/10 p-6 md:p-8">
-          <div>
-            <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-copper" data-i18n="privacy.eyebrow">Piltid App</p>
-            <h2 id="privacy-title" class="font-display text-3xl font-bold leading-tight md:text-5xl" data-i18n="privacy.title">Datenschutzrichtlinie für Piltid</h2>
-            <p id="privacy-intro" class="mt-4 max-w-3xl text-base leading-7 text-ink/66 md:text-lg md:leading-8" data-i18n="privacy.intro">App-spezifische Datenschutzinformationen für Piltid in deutscher und englischer Sprache.</p>
+          <div class="flex min-w-0 flex-col gap-5 sm:flex-row sm:items-center">
+            <img class="app-icon shrink-0" src="assets/piltid_new.png" alt="Piltid app icon" />
+            <div>
+              <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-copper" data-i18n="privacy.eyebrow">Piltid App</p>
+              <h2 id="privacy-title" class="font-display text-3xl font-bold leading-tight md:text-5xl" data-i18n="privacy.title">Datenschutzrichtlinie für Piltid</h2>
+              <p id="privacy-intro" class="mt-4 max-w-3xl text-base leading-7 text-ink/66 md:text-lg md:leading-8" data-i18n="privacy.intro">App-spezifische Datenschutzinformationen für Piltid in deutscher und englischer Sprache.</p>
+            </div>
           </div>
           <button class="shrink-0 rounded-full border border-ink/10 bg-white/70 px-4 py-2 text-sm font-bold text-ink transition hover:bg-white" type="button" data-privacy-close data-i18n="privacy.close">Schließen</button>
         </div>
@@ -932,7 +954,7 @@
         },
         support: {
           eyebrow: 'App Support & Privacy Contact',
-          title: 'Support and privacy page for apps by Mayrlein Design.',
+          title: 'Support and privacy section for apps by Mayrlein Design.',
           supportTitle: 'App Support and Privacy Policies',
           copy: 'For app questions, support requests, privacy communication or technical feedback, you can reach me by email.',
           cta: 'Contact app support',
